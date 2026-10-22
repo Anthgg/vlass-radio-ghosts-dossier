@@ -1,0 +1,21 @@
+# URL: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=VIII%2F65%2Fnvss&-c=35.53412+45.44439&-c.rs=10.0&-out.all=&-mime=tsv
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-22T18:15:32 [V7.6.2]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-22T18:15:32	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=VIII%2F65%2Fnvss&-c=35.53412+45.44439&-c.rs=10.0&-out.all=&-mime=tsv	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.2	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+#INFO	MaxTuples=50000	
+#INFO	-c=035.534120+45.444390,rs=10.	
+#Constraint -mime=tsv
+
+#RESOURCE=
+#Name:
+#Title:
