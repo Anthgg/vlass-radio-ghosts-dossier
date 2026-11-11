@@ -82,11 +82,18 @@ cd vlass-radio-ghosts-dossier
 python3 vlass_ghosts_pipeline.py
 ```
 
-The script has no command-line arguments. It queries CDS, prints each decision, and writes the survivor list only to this hard-coded path:
+The script has no command-line arguments. It queries CDS, prints each decision, and writes the survivor list to the path in its final `open(...)` call:
 
 `C:\Users\anthg\.swarmmemo\vlass_ghosts_survivors.json`
 
-That path is outside this repository. A run from this checkout writes there, and updates the committed JSON files only if that line is pointed at them first. The script also turns off TLS certificate verification for its HTTP requests.
+Replace that path before running, so the new shortlist lands in a file you can find. The script does not create parent directories. Pointing it at `vlass_ghosts_survivors.json` overwrites the committed catalog.
+
+Left unchanged, that string is not the same path on every platform:
+
+- On Linux and macOS, `\` is not a separator. Python treats the whole string as one relative filename in the current directory, backslashes included. The write does not replace `vlass_ghosts_survivors.json`.
+- On Windows, the same string is an absolute path. The write succeeds only when `C:\Users\anthg\.swarmmemo` already exists.
+
+The script also turns off TLS certificate verification for its HTTP requests.
 
 The committed pipeline output is the ranked catalog in the next section. Re-running the query can return a different five names: TAP row order is unspecified wherever the script uses the first row, and the parent sample is only the top 60 rows at the time of the query.
 
